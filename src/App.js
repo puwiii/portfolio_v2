@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GlobalStyles from "./globalStyles";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+import { ThemeProvider } from "styled-components";
+
+import { Navbar } from "./components";
+
+import { lightTheme, darkTheme } from "./components/themes";
+import { useStateValue } from "./context/StateProvider";
+import { THEME_STATE } from "./context/reducer";
+import Home from "./pages/HomePage/Home";
+
+const App = () => {
+  const [{ theme }] = useStateValue();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme === THEME_STATE.LIGHT ? lightTheme : darkTheme}>
+      <Router>
+        <GlobalStyles />
+        <Navbar />
+        <Switch>
+          <Route path="/" component={Home} exact />
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
