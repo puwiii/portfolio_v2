@@ -1,28 +1,7 @@
 import styled from "styled-components";
-import { Container, Button, LinkButton } from "../../globalStyles";
+import { Container, Button, LinkButton, Section } from "../../globalStyles";
 
-export const StyledSection = styled.section`
-  width: 100%;
-  padding: 170px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: ${({ variantNegative, theme }) =>
-    variantNegative ? theme.color_text_400 : theme.color_background_400};
-
-  background: ${({ variantColor, variantNegative, theme }) =>
-    variantColor
-      ? variantNegative
-        ? "#323232"
-        : theme.color_blue_200 + "11"
-      : variantNegative
-      ? theme.color_text_400
-      : theme.color_background_400};
-
-  @media screen and (max-width: 960px) {
-    padding: 100px 0;
-  }
-`;
+export const StyledSection = styled(Section)``;
 
 export const SectionContainer = styled(Container)`
   display: flex;
@@ -49,7 +28,6 @@ export const SectionImageWrapper = styled.div`
 
 export const SectionImage = styled.img`
   width: 80%;
-  background-color: ${({ theme }) => theme.color_blue_200 + "13"};
   height: 100%;
   margin-top: auto;
   object-fit: contain;
@@ -85,17 +63,16 @@ export const SectionAnimationAttr = styled.a`
   display: flex;
   align-items: center;
   text-underline-offset: 6px;
+  width: max-content;
   font-weight: 600;
-  color: ${({ variantNegative, theme }) =>
-    variantNegative ? theme.color_background_400 : theme.color_text_400};
-  color: ${({ theme }) => theme.color_blue_200};
+  color: ${({ theme }) => theme.color_pink_200};
   padding: 1em;
   border-radius: 100px;
   transition: background-color 125ms linear;
   text-decoration: underline;
 
   &:hover {
-    background-color: ${({ theme }) => theme.color_blue_200 + "18"};
+    background-color: ${({ theme }) => theme.color_pink_200 + "22"};
   }
 `;
 
@@ -130,6 +107,10 @@ export const SectionTitle = styled.h2`
   font-size: 3rem;
   font-weight: 900;
   letter-spacing: -2px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 2rem;
+  }
 `;
 
 export const SectionSubtitle = styled.h4`

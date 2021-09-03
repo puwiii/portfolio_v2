@@ -95,7 +95,42 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 5px;
+  color: ${({ theme }) => theme.color_text_400 + "aa"};
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: border-color 125ms ease-in-out, color 125ms linear;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.color_text_400};
+    color: ${({ theme }) => theme.color_text_400};
+  }
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 960px) {
+    padding: 1em;
+
+    &:hover {
+      opacity: 0.8;
+      border-color: transparent;
+    }
+  }
+`;
+
+export const NavLinkAnchor = styled.a`
   padding: 0 1em;
   display: flex;
   align-items: center;

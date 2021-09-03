@@ -88,6 +88,12 @@ textarea {
   "Lato", sans-serif;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(100);
+  //border: 2px dashed #ccc;
+}
+
 
 `;
 
@@ -159,6 +165,63 @@ export const LinkButton = styled.a`
 
   @media screen and (max-width: 991px) {
     width: 100%;
+  }
+`;
+
+export const Section = styled.section`
+  width: 100%;
+  padding: 170px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${({ variantNegative, theme }) =>
+    variantNegative ? theme.color_text_400 : theme.color_background_400};
+
+  background: ${({ variantColor, variantNegative, theme }) =>
+    variantColor
+      ? variantNegative
+        ? theme.color_text_400
+        : theme.color_background_300
+      : variantNegative
+      ? theme.color_text_400
+      : theme.color_background_400};
+
+  @media screen and (max-width: 960px) {
+    padding: 100px 0;
+  }
+`;
+
+export const Input = styled.input`
+  background: transparent;
+  color: ${({ theme }) => theme.color_text_400};
+  width: 100%;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid ${({ theme }) => theme.color_text_400 + "66"};
+  padding: 0.8em;
+
+  transition: border-color 125ms linear;
+
+  &:focus-within {
+    border-color: ${({ theme }) => theme.color_pink_400};
+  }
+`;
+
+export const InputTextArea = styled.textarea`
+  background: transparent;
+  color: ${({ theme }) => theme.color_text_400};
+  width: 100%;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid ${({ theme }) => theme.color_text_400 + "66"};
+
+  padding: 0.8em;
+  transition: border-color 125ms linear;
+
+  &:focus-within {
+    border-color: ${({ theme }) => theme.color_pink_400};
   }
 `;
 

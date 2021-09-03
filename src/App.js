@@ -10,6 +10,7 @@ import { lightTheme, darkTheme } from "./components/themes";
 import { useStateValue } from "./context/StateProvider";
 import { THEME_STATE } from "./context/reducer";
 import Home from "./pages/HomePage/Home";
+import Contact from "./pages/Contact";
 
 const App = () => {
   const [{ theme }] = useStateValue();
@@ -21,6 +22,7 @@ const App = () => {
         <Navbar />
         <Switch>
           <Route path="/" component={Home} exact />
+          <Route path="/contact" component={Contact} exact />
         </Switch>
       </Router>
     </ThemeProvider>

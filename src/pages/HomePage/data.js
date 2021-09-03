@@ -19,7 +19,7 @@ export const aboutMe = {
   variantLayout: false,
   img: {
     type: IMG_TYPE.ANIMATION,
-    animationName: "lottie_rocket.json",
+    animationName: "lottie_rocket_2.json",
     attr: {
       icon: <BiLinkExternal />,
       label: "Lex Komkov",
@@ -28,9 +28,9 @@ export const aboutMe = {
   },
   heading: "Acerca de mí",
   title: "Desarrollador Front-End.",
-  subtitle: "Ex-estudiante de Ingenieria en sistemas y Autodidacta desde 2021.",
+  subtitle: "Ex-estudiante de Ingeniería en sistemas y Autodidacta desde 2021.",
   description: [
-    `Hola 🙋‍♂️, soy un desarrolador Front-End de Argentina. Me apasiona llevar cada proyecto a su máximo nivel mediante el uso de ilustraciones/animaciones y óptimas manera de organizar la información con principios UX/UI para mejorar la experiencia del usuario 🏌.`,
+    `Hola 🙋‍♂️, soy un desarrollador Front-End de Argentina. Me apasiona llevar cada proyecto a su máximo nivel mediante el uso de ilustraciones/animaciones y óptimas manera de organizar la información con principios UX/UI para mejorar la experiencia del usuario 🏌.`,
     `Ademas soy un natural problem-solver 🧠, me encanta afrontar nuevos desafíos y resolverlos. Desde siempre he tenido una atracción a los pequeños detalles que logran grandes resultados 🚀.`,
     ` Si tienes un proyecto y necesitas darle una cara bonita hablemos 💬.`,
   ],
@@ -52,7 +52,7 @@ export const laboratory = {
     type: IMG_TYPE.SVG,
     object: <Meaning />,
   },
-  heading: "Mi escencia",
+  heading: "Mi esencia",
   title: "El Laboratorio de Frontendstein.",
   subtitle:
     "Un laboratorio a base de una mezcla de lógica 👨‍💻 y creatividad 🎨.",
@@ -65,7 +65,11 @@ export const laboratory = {
     >
       Lógica
     </strong>,
-    `Performance · Estructura · Optimización · Accesibilidad · Eficiencia · Seguridad`,
+    `La lógica es un pilar muy importante en los proyectos de software, una buena lógica no solo esta presente en el código sino también es parte de uno mismo y la manera en la que resuelve los rompecabezas.`,
+    <strong>
+      Performance · Estructura · Optimización · Accesibilidad · Eficiencia ·
+      Seguridad
+    </strong>,
     <strong
       style={{
         color: "#c33764",
@@ -74,7 +78,10 @@ export const laboratory = {
     >
       Creatividad
     </strong>,
-    `Identidad · Chispa · Carácter · Frescura · Usabilidad · Intuición`,
+    `La creatividad puede brindar personalidad a cada proyecto, la elección de sus colores, la fuente que elijas puede transmitir distintos mensajes. La creatividad evoca en juntar todas estas propiedades y juntarlas en un único propósito de marca.`,
+    <strong>
+      Identidad · Chispa · Carácter · Frescura · Usabilidad · Intuición
+    </strong>,
   ],
 };
 
@@ -93,11 +100,11 @@ export const technologies = {
     },
   },
   heading: "Mis herramientas",
-  title: "Tecnologías y herramientas que utlizo.",
+  title: "Tecnologías y herramientas que utilizo.",
   subtitle: "¿Mi especialidad? ReactJS ⚛️.",
   description: [
-    `A lo largo de mi formación he estado aprendiendo desde las bases como los algoritmos de busqueda y ordenamiento, estructuras de datos y complejidad hasta los conceptos mas pragmaticos.`,
-    `Mi manejo en las tecnologias Front-End van desde el diseño y la maquetación hasta la programación de las funcionalidades de una aplicación web.`,
-    `Mi especialidad es ReactJS el cual puedo combinar con NextJS si se requiere, un poderoso marco de desarrollo basado en ReactJS`,
+    `A lo largo de mi formación he estado aprendiendo desde las bases como los algoritmos de búsqueda y ordenamiento, estructuras de datos y complejidad hasta los conceptos mas pragmáticos 📚.`,
+    `Mi manejo en las tecnologías Front-End van desde el diseño y la maquetación hasta la programación de las funcionalidades de una aplicación web.`,
+    `Mi especialidad es ReactJS el cual puedo combinar con NextJS si se requiere, un poderoso marco de desarrollo basado en ReactJS 🔥.`,
   ],
 };

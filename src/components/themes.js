@@ -13,9 +13,14 @@ export const lightTheme = {
   color_pink_600: "#75213c",
   color_pink_700: "#4e1628",
 
+  color_background_300: "#E4EBF1",
   color_background_400: "#eef2f6",
 
-  color_text_400: "#181a23",
+  color_text_400: "#2f3139",
+
+  color_info: "#ffc107",
+  color_error: "#c43d3d",
+  color_success: "#21a047",
 };
 
 export const darkTheme = {
@@ -33,7 +38,12 @@ export const darkTheme = {
   color_pink_600: "#9c2c50",
   color_pink_700: "#75213c",
 
-  color_text_400: "#dfe6ef",
+  color_text_400: "#E4EBF1",
 
+  color_background_300: "#212431",
   color_background_400: "#181a23",
+
+  color_info: "#ffc107",
+  color_error: "#CA5353",
+  color_success: "#26BA53",
 };

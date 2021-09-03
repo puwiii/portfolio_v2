@@ -19,7 +19,7 @@ import {
   SectionLink,
   SectionAnimationAttr,
   SectionImageSVG,
-} from "./Section.elements";
+} from "./InfoSection.elements";
 
 const Section = ({ data, propId = null }) => {
   const {
@@ -74,7 +74,6 @@ const Section = ({ data, propId = null }) => {
   const handleButton = (button) => {
     switch (button.type) {
       case BUTTON_TYPE.LINK:
-        console.log(button);
         return (
           <SectionLink href={button.link}>
             {button.label.icon}
@@ -100,6 +99,7 @@ const Section = ({ data, propId = null }) => {
       variantColor={variantColor}
       variantNegative={variantNegative}
       id={propId}
+      key={propId}
     >
       <SectionContainer variantLayout={variantLayout}>
         <SectionImageWrapper>{handleImg()}</SectionImageWrapper>

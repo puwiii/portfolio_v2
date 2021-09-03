@@ -13,6 +13,7 @@ import {
   NavThemeSwitch,
   NavPlaceholder,
   NavThemeSwitchLabel,
+  NavLinkAnchor,
 } from "./Navbar.elements";
 import {
   BiX,
@@ -136,26 +137,25 @@ const Navbar = () => {
             show={showPlaceholder}
           />
           <NavItem onMouseEnter={(e) => handlePlaceholder(e)}>
-            <NavLink>
+            <NavLink to={"/"}>
               <BiHomeAlt />
               Inicio
             </NavLink>
           </NavItem>
           <NavItem onMouseEnter={(e) => handlePlaceholder(e)}>
-            <NavLink>
+            <NavLink to={"/projects"}>
               <BiCode />
               Proyectos
             </NavLink>
           </NavItem>
           <NavItem onMouseEnter={(e) => handlePlaceholder(e)}>
-            <NavLink>
-              {" "}
+            <NavLink to={"/timeline"}>
               <BiCalendar />
               Timeline
             </NavLink>
           </NavItem>
           <NavItem onMouseEnter={(e) => handlePlaceholder(e)}>
-            <NavLink>
+            <NavLink to={"/contact"}>
               <BiCommentDetail />
               Contacto
             </NavLink>
