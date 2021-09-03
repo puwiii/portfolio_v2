@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import Lottie from "lottie-web";
 import { BUTTON_TYPE, IMG_TYPE } from "../../pages/HomePage/data";
 import {
   StyledSection,
@@ -16,6 +17,8 @@ import {
   SectionButtonWrapper,
   SectionButton,
   SectionLink,
+  SectionAnimationAttr,
+  SectionImageSVG,
 } from "./Section.elements";
 
 const Section = ({ data, propId = null }) => {
@@ -23,6 +26,7 @@ const Section = ({ data, propId = null }) => {
     id,
     variantColor,
     variantLayout,
+    variantNegative,
     img,
     heading,
     title,
@@ -31,16 +35,36 @@ const Section = ({ data, propId = null }) => {
     buttons,
   } = data;
 
+  const lottieContainer = useRef(null);
+
+  useEffect(() => {
+    if (img.type === IMG_TYPE.ANIMATION) {
+      Lottie.loadAnimation({
+        container: lottieContainer.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        animationData: require(`../../animations/${img.animationName}`),
+      });
+    }
+  }, []);
+
   const handleImg = () => {
     switch (img.type) {
       case IMG_TYPE.IMG:
         return <SectionImage src={img.src} alt={img.alt} />;
 
       case IMG_TYPE.SVG:
-        return img.object;
+        return <SectionImageSVG>{img.object}</SectionImageSVG>;
 
       case IMG_TYPE.ANIMATION:
-        return <SectionAnimation />;
+        return (
+          <SectionAnimation ref={lottieContainer}>
+            <SectionAnimationAttr href={img.attr.link} target="_blank">
+              {img.attr.icon} Author · {img.attr.label}
+            </SectionAnimationAttr>
+          </SectionAnimation>
+        );
 
       default:
         return <SectionImagePlaceholder />;
@@ -72,20 +96,27 @@ const Section = ({ data, propId = null }) => {
   };
 
   return (
-    <StyledSection variantColor={variantColor} id={propId}>
+    <StyledSection
+      variantColor={variantColor}
+      variantNegative={variantNegative}
+      id={propId}
+    >
       <SectionContainer variantLayout={variantLayout}>
         <SectionImageWrapper>{handleImg()}</SectionImageWrapper>
-        <SectionInfo>
+        <SectionInfo
+          variantColor={variantColor}
+          variantNegative={variantNegative}
+        >
           <SectionHeading>{heading}</SectionHeading>
           <SectionTitle>{title}</SectionTitle>
           <SectionSubtitle>{subtitle}</SectionSubtitle>
           <SectionDescription>
-            {description.map((item, id) => (
+            {description?.map((item, id) => (
               <SectionPharagraph key={id}>{item}</SectionPharagraph>
             ))}
           </SectionDescription>
           <SectionButtonWrapper>
-            {buttons.map((button) => {
+            {buttons?.map((button) => {
               return handleButton(button);
             })}
           </SectionButtonWrapper>

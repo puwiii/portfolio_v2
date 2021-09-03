@@ -16,7 +16,7 @@ body{
   font-family: 'Lato', sans-serif;
   font-weight: 400; 
   min-height: 100vh;
-  background: ${({ theme }) => theme.color_background};
+  background: ${({ theme }) => theme.color_background_400};
   line-height: 1.3;
 }
 
@@ -36,7 +36,7 @@ body{
       border: 4px solid rgba(0, 0, 0, 0);
       background-clip: padding-box;
       border-radius: 9999px;
-      background-color: ${({ theme }) => theme.color_text};
+      background-color: ${({ theme }) => theme.color_text_400};
     }
   
     ::-webkit-scrollbar-track {
@@ -123,8 +123,8 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    border-color: ${({ theme }) => theme.color_text};
-    color: ${({ theme }) => theme.color_text};
+    border-color: ${({ theme }) => theme.color_text_400};
+    color: ${({ theme }) => theme.color_text_400};
     background-color: transparent;
   }
 
@@ -152,8 +152,8 @@ export const LinkButton = styled.a`
 
   &:hover,
   &:focus {
-    border-color: ${({ theme }) => theme.color_text};
-    color: ${({ theme }) => theme.color_text};
+    border-color: ${({ theme }) => theme.color_text_400};
+    color: ${({ theme }) => theme.color_text_400};
     background-color: transparent;
   }
 

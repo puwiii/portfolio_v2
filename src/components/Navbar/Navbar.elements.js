@@ -3,7 +3,7 @@ import { Container, Button } from "../../globalStyles";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
-  background: ${({ theme }) => theme.color_background};
+  background: ${({ theme }) => theme.color_background_400};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   z-index: 100;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.color_text + "15"};
+  border-bottom: 1px solid ${({ theme }) => theme.color_text_400 + "15"};
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -59,7 +59,7 @@ export const NavMenu = styled.ul`
     height: calc(100vh - 75px);
     top: 75px;
     left: ${({ show }) => (show ? 0 : "-100%")};
-    background: ${({ theme }) => theme.color_background};
+    background: ${({ theme }) => theme.color_background_400};
     overflow-y: auto;
   }
 `;
@@ -72,7 +72,7 @@ export const NavPlaceholder = styled.li`
   position: absolute;
   z-index: -1;
   top: 17px;
-  background: ${({ theme }) => `${theme.color_text}17`};
+  background: ${({ theme }) => `${theme.color_text_400}17`};
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 7px;
   height: 40px;
@@ -104,7 +104,7 @@ export const NavLink = styled.a`
   font-size: 1rem;
   font-weight: 600;
   gap: 5px;
-  color: ${({ theme }) => theme.color_text + "aa"};
+  color: ${({ theme }) => theme.color_text_400 + "aa"};
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -113,8 +113,8 @@ export const NavLink = styled.a`
   transition: border-color 125ms ease-in-out, color 125ms linear;
 
   &:hover {
-    border-color: ${({ theme }) => theme.color_text};
-    color: ${({ theme }) => theme.color_text};
+    border-color: ${({ theme }) => theme.color_text_400};
+    color: ${({ theme }) => theme.color_text_400};
   }
   @media screen and (max-width: 1200px) {
     flex-direction: column;
@@ -145,7 +145,7 @@ export const MobileButton = styled.button`
     justify-self: flex-end;
     padding: 5px;
     margin-left: 15px;
-    color: ${({ theme }) => theme.color_text};
+    color: ${({ theme }) => theme.color_text_400};
   }
 `;
 
@@ -160,11 +160,11 @@ export const NavThemeSwitch = styled.button`
   justify-self: flex-end;
   padding: 5px 12px;
   margin-left: 10px;
-  color: ${({ theme }) => theme.color_text};
+  color: ${({ theme }) => theme.color_text_400};
   border-radius: 3px;
   transition: background-color 125ms linear;
   &:hover {
-    background-color: ${({ theme }) => theme.color_text + "22"};
+    background-color: ${({ theme }) => theme.color_text_400 + "22"};
   }
 `;
 

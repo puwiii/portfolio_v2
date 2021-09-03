@@ -68,9 +68,7 @@ const Navbar = () => {
     });
   };
 
-  useEffect(() => {
-    handleThemeSwitch();
-  }, [theme]);
+  useEffect(handleThemeSwitch, [theme]);
 
   useEffect(() => {
     if (themeLS) {
