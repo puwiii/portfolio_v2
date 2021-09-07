@@ -23,7 +23,6 @@ import {
 
 const Section = ({ data, propId = null }) => {
   const {
-    id,
     variantColor,
     variantLayout,
     variantNegative,
@@ -47,7 +46,7 @@ const Section = ({ data, propId = null }) => {
         animationData: require(`../../animations/${img.animationName}`),
       });
     }
-  }, []);
+  }, [img]);
 
   const handleImg = () => {
     switch (img.type) {
@@ -77,8 +76,8 @@ const Section = ({ data, propId = null }) => {
         return (
           <SectionLink
             href={button.link}
-            style={{ color: `#f00` }}
-            style={button.styles}
+            // style={{ color: `#f00` }}
+            // style={button.styles}
             target={button.isBlank && "_blank"}
           >
             {button.label.icon}

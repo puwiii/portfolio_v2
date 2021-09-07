@@ -61,32 +61,31 @@ const Navbar = () => {
   window.addEventListener("resize", handleMobileLogo);
   //MOBILE LOGO-----------------
 
-  const handleThemeSwitch = () => {
-    setThemeLS(theme);
-  };
-
   const handleTheme = () => {
-    dispatch({
-      type: "SET_THEME",
-      theme: theme === THEME_STATE.DARK ? THEME_STATE.LIGHT : THEME_STATE.DARK,
-    });
+    if (themeLS === THEME_STATE.DARK) {
+      setThemeLS(THEME_STATE.LIGHT);
+    } else {
+      setThemeLS(THEME_STATE.DARK);
+    }
   };
-
-  useEffect(handleThemeSwitch, [theme]);
 
   useEffect(() => {
-    if (themeLS) {
-      themeLS === THEME_STATE.DARK
-        ? dispatch({
-            type: "SET_THEME",
-            theme: THEME_STATE.DARK,
-          })
-        : dispatch({
-            type: "SET_THEME",
-            theme: THEME_STATE.LIGHT,
-          });
-    }
-  }, []);
+    const seeForLocalStorage = () => {
+      if (themeLS) {
+        themeLS === THEME_STATE.DARK
+          ? dispatch({
+              type: "SET_THEME",
+              theme: THEME_STATE.DARK,
+            })
+          : dispatch({
+              type: "SET_THEME",
+              theme: THEME_STATE.LIGHT,
+            });
+      }
+    };
+
+    seeForLocalStorage();
+  }, [themeLS, dispatch]);
 
   const handlePlaceholder = (e) => {
     setWidth(e.target.clientWidth);

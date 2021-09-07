@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Container, Button, LinkButton, Section } from "../../globalStyles";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 export const ProjectsSection = styled(Section)``;
 
@@ -20,8 +19,8 @@ export const ProjectTitle = styled.h3`
   font-weight: 900;
   letter-spacing: -1.5px;
 
-  @media screen and (max-width:425px){
-      font-size:2rem;
+  @media screen and (max-width: 425px) {
+    font-size: 2rem;
   }
 `;
 
@@ -34,9 +33,9 @@ export const ProjectSubtitle = styled.h4`
 
 export const ProjectDescription = styled.div`
   padding: 20px 0;
-  display:flex;
-  flex-direction:column;
-  gap:20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 export const ProjectPharagraph = styled.p`
@@ -44,12 +43,11 @@ export const ProjectPharagraph = styled.p`
   line-height: 1.6;
   font-weight: 500;
 
-
-text-align: justify;
-    @media screen and (max-width:425px){
-       font-size: .9rem;
+  text-align: justify;
+  @media screen and (max-width: 425px) {
+    font-size: 0.9rem;
   }
-`
+`;
 
 export const ProjectImages = styled.div`
   display: flex;
@@ -85,7 +83,7 @@ export const ProjectImage = styled.img`
   width: 100%;
   cursor: pointer;
   opacity: 0.9;
-  height:auto;
+  height: auto;
 `;
 
 export const ProjectLinks = styled.div`
@@ -93,18 +91,17 @@ export const ProjectLinks = styled.div`
   justify-content: stretch;
   gap: 20px;
 
-    @media screen and (max-width:960px){
-       flex-direction: column;
-       gap:10px;
-
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    gap: 10px;
   }
 `;
 
 export const ProjectLink = styled(LinkButton)`
   width: 100%;
   font-size: 1rem;
-    @media screen and (max-width:425px){
-       font-size: .9rem;
+  @media screen and (max-width: 425px) {
+    font-size: 0.9rem;
   }
 `;
 

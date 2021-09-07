@@ -19,8 +19,7 @@ import {
   ProjectImageViewer,
   ProjectImageViewerImage,
   ProjectImageViewerContainer,
-  ProjectImagePlaceholder,
-  ProjectPharagraph
+  ProjectPharagraph,
 } from "./Projects.elements";
 
 import { projects } from "./data";
@@ -45,8 +44,6 @@ const Projects = () => {
                 <ProjectImages>
                   {item.images.map((image) => (
                     <ProjectImageWrapper>
-      
-
                       <ProjectImage
                         src={image.src}
                         alt={image.alt}
@@ -55,9 +52,11 @@ const Projects = () => {
                     </ProjectImageWrapper>
                   ))}
                 </ProjectImages>
-                <ProjectDescription>{item.description.map((pharagraph)=>(
-                  <ProjectPharagraph>{pharagraph}</ProjectPharagraph>
-                ))}</ProjectDescription>
+                <ProjectDescription>
+                  {item.description.map((pharagraph) => (
+                    <ProjectPharagraph>{pharagraph}</ProjectPharagraph>
+                  ))}
+                </ProjectDescription>
                 <ProjectLinks>
                   {item.githubLink && (
                     <ProjectLink href={item.githubLink} target="_blank">

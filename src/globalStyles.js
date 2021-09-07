@@ -137,7 +137,7 @@ export const Button = styled.button`
   cursor: pointer;
   border-radius: 4px;
   background: ${({ theme }) => theme.color_blue_400};
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   padding: 1em;
   font-size: 0.9rem;
   letter-spacing: -0.5px;
@@ -165,7 +165,7 @@ export const LinkButton = styled.a`
   gap: 5px;
   cursor: pointer;
   border-radius: 4px;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   padding: 1em;
   font-size: 0.9rem;
   letter-spacing: -0.5px;
