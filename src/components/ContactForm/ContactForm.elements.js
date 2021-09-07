@@ -9,8 +9,12 @@ import {
 } from "../../globalStyles";
 
 export const FormSection = styled(Section)`
-  padding: 0 0;
-  min-height: calc(100vh - 75px);
+  padding: 0px 0;
+  min-height: calc(100vh - 76px);
+
+  @media screen and (max-width: 960px) {
+    padding: 100px 0;
+  }
 `;
 
 export const FormContainer = styled(Container)`
@@ -81,7 +85,7 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: stretch;
   padding: 40px 0;
-  gap: 15px;
+  gap: 25px;
   color: ${({ theme }) => theme.color_text_400};
 `;
 
@@ -102,14 +106,20 @@ export const FormInputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 3px;
+  gap: 0px;
   justify-content: center;
 `;
 
 export const FormInputLabel = styled.label`
   user-select: none;
   pointer-events: none;
-  font-size: 0.9rem;
+  opacity: 0.5;
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  @media screen and (max-width: 425px) {
+    font-size: 0.7rem;
+  }
 `;
 
 export const FormTextArea = styled(InputTextArea)``;
@@ -141,4 +151,6 @@ export const FormButtonsWrapper = styled.div`
   }
 `;
 
-export const FormButton = styled(Button)``;
+export const FormButton = styled(Button)`
+  font-size: 1rem;
+`;

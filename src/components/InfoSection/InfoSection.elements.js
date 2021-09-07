@@ -42,7 +42,7 @@ export const SectionImageSVG = styled.div`
 
   & > svg {
     aspect-ratio: 1/1;
-    height: 100%;
+    height: 80%;
     width: 100%;
   }
 `;
@@ -55,7 +55,7 @@ export const SectionAnimation = styled.div`
 
 export const SectionAnimationAttr = styled.a`
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   gap: 5px;
   top: 100%;
   left: 50%;
@@ -64,15 +64,17 @@ export const SectionAnimationAttr = styled.a`
   align-items: center;
   text-underline-offset: 6px;
   width: max-content;
-  font-weight: 600;
+  font-weight: 900;
   color: ${({ theme }) => theme.color_pink_200};
   padding: 1em;
   border-radius: 100px;
   transition: background-color 125ms linear;
-  text-decoration: underline;
 
   &:hover {
     background-color: ${({ theme }) => theme.color_pink_200 + "22"};
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 0.6rem;
   }
 `;
 
@@ -110,6 +112,7 @@ export const SectionTitle = styled.h2`
 
   @media screen and (max-width: 425px) {
     font-size: 2rem;
+    letter-spacing: -1px;
   }
 `;
 
@@ -136,9 +139,11 @@ export const SectionPharagraph = styled.p`
 `;
 
 export const SectionButtonWrapper = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 10px;
 
   @media screen and (max-width: 768px) {
     justify-content: center;

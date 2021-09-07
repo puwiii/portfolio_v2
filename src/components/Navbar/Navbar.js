@@ -13,7 +13,9 @@ import {
   NavThemeSwitch,
   NavPlaceholder,
   NavThemeSwitchLabel,
-  NavLinkAnchor,
+  NavSocialLinks,
+  SocialLink,
+  SocialLinkLabel,
 } from "./Navbar.elements";
 import {
   BiX,
@@ -26,6 +28,7 @@ import {
   BiSun,
   BiLinkExternal,
 } from "react-icons/bi";
+import { RiGithubLine, RiLinkedinBoxLine } from "react-icons/ri";
 import { useStateValue } from "../../context/StateProvider";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { removeFocus } from "../../helpers/removeFocus";
@@ -173,6 +176,27 @@ const Navbar = () => {
               <BiLinkExternal />
               Descargar CV
             </NavButton>
+          </NavItem>
+
+          <NavItem>
+            <NavSocialLinks>
+              <SocialLink
+                variant="github"
+                href="https://github.com/puwiii/"
+                target="_blank"
+              >
+                <RiGithubLine />
+                <SocialLinkLabel>Mi Github</SocialLinkLabel>
+              </SocialLink>
+              <SocialLink
+                variant="linkedin"
+                href="https://www.linkedin.com/in/sebastian-mathieur/"
+                target="_blank"
+              >
+                <RiLinkedinBoxLine />
+                <SocialLinkLabel>Mi Linkedin</SocialLinkLabel>
+              </SocialLink>
+            </NavSocialLinks>
           </NavItem>
         </NavMenu>
 

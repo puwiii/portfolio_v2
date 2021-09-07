@@ -16,7 +16,7 @@ export const aboutMe = {
   id: 1,
   variantNegative: false,
   variantColor: false,
-  variantLayout: false,
+  variantLayout: true,
   img: {
     type: IMG_TYPE.ANIMATION,
     animationName: "lottie_rocket_2.json",
@@ -32,7 +32,9 @@ export const aboutMe = {
   description: [
     `Hola 🙋‍♂️, soy un desarrollador Front-End de Argentina. Me apasiona llevar cada proyecto a su máximo nivel mediante el uso de ilustraciones/animaciones y óptimas manera de organizar la información con principios UX/UI para mejorar la experiencia del usuario 🏌.`,
     `Ademas soy un natural problem-solver 🧠, me encanta afrontar nuevos desafíos y resolverlos. Desde siempre he tenido una atracción a los pequeños detalles que logran grandes resultados 🚀.`,
-    ` Si tienes un proyecto y necesitas darle una cara bonita hablemos 💬.`,
+    <strong>
+      Si tienes un proyecto y necesitas darle una cara bonita hablemos 💬.
+    </strong>,
   ],
   buttons: [
     {
@@ -47,7 +49,7 @@ export const laboratory = {
   id: 2,
   variantNegative: false,
   variantColor: true,
-  variantLayout: true,
+  variantLayout: false,
   img: {
     type: IMG_TYPE.SVG,
     object: <Meaning />,
@@ -78,7 +80,7 @@ export const laboratory = {
     >
       Creatividad
     </strong>,
-    `La creatividad puede brindar personalidad a cada proyecto, la elección de sus colores, la fuente que elijas puede transmitir distintos mensajes. La creatividad evoca en juntar todas estas propiedades y juntarlas en un único propósito de marca.`,
+    `La creatividad puede brindar personalidad a cada proyecto, como la elección de sus colores o la fuente que elijas pueden lograr transmitir distintos mensajes. La creatividad evoca en juntar todas estas propiedades y juntarlas en un único propósito de marca.`,
     <strong>
       Identidad · Chispa · Carácter · Frescura · Usabilidad · Intuición
     </strong>,
@@ -89,7 +91,7 @@ export const technologies = {
   id: 3,
   variantNegative: false,
   variantColor: false,
-  variantLayout: false,
+  variantLayout: true,
   img: {
     type: IMG_TYPE.ANIMATION,
     animationName: "react.json",

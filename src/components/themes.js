@@ -38,7 +38,7 @@ export const darkTheme = {
   color_pink_600: "#9c2c50",
   color_pink_700: "#75213c",
 
-  color_text_400: "#E4EBF1",
+  color_text_400: "#CAD7E3",
 
   color_background_300: "#212431",
   color_background_400: "#181a23",

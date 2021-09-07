@@ -75,7 +75,12 @@ const Section = ({ data, propId = null }) => {
     switch (button.type) {
       case BUTTON_TYPE.LINK:
         return (
-          <SectionLink href={button.link}>
+          <SectionLink
+            href={button.link}
+            style={{ color: `#f00` }}
+            style={button.styles}
+            target={button.isBlank && "_blank"}
+          >
             {button.label.icon}
             {button.label.text}
           </SectionLink>

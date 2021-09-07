@@ -38,8 +38,6 @@ const ContactForm = ({ variantColor }) => {
     e.preventDefault();
     if (sendingEmail) return;
 
-    console.log(nameInput.current.value);
-
     if (nameInput.current.value === "") {
       nameInput.current.focus();
       setErrorMsg("El nombre no puede estar vacío.");
@@ -99,7 +97,7 @@ const ContactForm = ({ variantColor }) => {
         </FormImageWrapper>
         <FormWrapper>
           <FormHeading>Contactame</FormHeading>
-          <FormTitle>¿Queres contruir algo?</FormTitle>
+          <FormTitle>¿Quieres construir algo?</FormTitle>
           <FormSubtitle>Hablemos sobre tu proyecto 💪.</FormSubtitle>
           <Form onSubmit={sendEmail}>
             <FormRow>

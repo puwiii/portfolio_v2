@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { Container, Button } from "../../globalStyles";
+import {
+  Container,
+  Button,
+  LinkButtonRounded,
+  LinkButton,
+} from "../../globalStyles";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
@@ -7,7 +12,6 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
   position: sticky;
   z-index: 100;
   top: 0;
@@ -101,7 +105,7 @@ export const NavLink = styled(Link)`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 1rem;
+
   font-weight: 600;
   gap: 5px;
   color: ${({ theme }) => theme.color_text_400 + "aa"};
@@ -166,7 +170,11 @@ export const NavLinkAnchor = styled.a`
 `;
 
 export const NavButton = styled(Button)`
-  margin: 0 1em;
+  margin-left: 10px;
+
+  @media screen and (max-width: 960px) {
+    margin: 0;
+  }
 `;
 
 export const MobileButton = styled.button`
@@ -206,4 +214,25 @@ export const NavThemeSwitch = styled.button`
 export const NavThemeSwitchLabel = styled.span`
   font-size: 0.9rem;
   font-weight: 400;
+`;
+
+export const NavSocialLinks = styled.div`
+  display: flex;
+  display: none;
+  gap: 15px;
+  width: 100%;
+  justify-content: stretch;
+
+  @media screen and (max-width: 960px) {
+    display: flex;
+  }
+`;
+
+export const SocialLink = styled(LinkButton)`
+  font-size: 1.5rem;
+  padding: 0.5em;
+`;
+
+export const SocialLinkLabel = styled.span`
+  font-size: 0.7rem;
 `;
