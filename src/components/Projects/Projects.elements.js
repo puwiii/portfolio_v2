@@ -10,12 +10,42 @@ export const Project = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 40px;
-  border-bottom: 2px solid ${({ theme }) => theme.color_text_400 + "11"};
+  padding: 60px;
+  background: ${({ theme }) => theme.color_background_00};
+  //box-shadow: 0 10px 1rem -5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+
+  backdrop-filter: blur(0px);
+  //box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.2);
+`;
+export const Title = styled.h1`
+  color: ${({ theme }) => theme.color_text_400};
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  width: max-content;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    top: calc(100% - 35%);
+    border-radius: 2px;
+    left: 10px;
+    z-index: -1;
+    background: ${({ theme }) => theme.color_blue_400 + "22"};
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 2rem;
+  }
 `;
 
 export const ProjectTitle = styled.h3`
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
   letter-spacing: -1.5px;
 

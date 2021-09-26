@@ -127,6 +127,10 @@ export const NavLink = styled(Link)`
       border-color: transparent;
     }
   }
+
+  & > svg {
+    pointer-events: none;
+  }
 `;
 
 export const NavLinkAnchor = styled.a`

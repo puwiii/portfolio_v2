@@ -1,5 +1,23 @@
 export const projects = [
   {
+    id: 7,
+    title: "Hospital Santa Rosa - Landing Page",
+    subtitle: "Tu salud es lo más importante",
+    description: [
+      // "Liza - Flashcards es un proyecto cuya intención es acercar a las personas los métodos más eficientes de estudio mediante una aplicación web interactiva.",
+      // "Esta Inspirada en Anki, una aplicación móvil y de escritorio que utiliza Active Recall y Spaced Repetition para implementar un sistema de tarjetas que el propio usuario se crea y que luego tendrá que responderlas y autoevaluarse cada cierta cantidad de tiempo.",
+    ],
+    githubLink: "https://github.com/puwiii/hsr-app",
+    link: "https://hospitalsantarosa.vercel.app/",
+    images: [
+      {
+        srchd: "/images/projects/originals/hsrHome.jpeg",
+        src: "/images/projects/originals/hsrHome.jpeg",
+        alt: "Hospital Santa Rosa - Home",
+      },
+    ],
+  },
+  {
     id: 1,
     title: "Liza - Flashcards",
     subtitle: "Flashcards forever",

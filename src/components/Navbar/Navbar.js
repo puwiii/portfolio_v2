@@ -88,6 +88,9 @@ const Navbar = () => {
   }, [themeLS, dispatch]);
 
   const handlePlaceholder = (e) => {
+    // console.log(e.target);
+    // console.log(e.target.clientWidth);
+    // console.log(e.target.offsetLeft);
     setWidth(e.target.clientWidth);
     setLeftOffset(e.target.offsetLeft);
   };

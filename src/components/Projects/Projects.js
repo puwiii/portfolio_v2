@@ -5,6 +5,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { BiCode, BiWorld } from "react-icons/bi";
 
 import {
+  Title,
   ProjectsSection,
   ProjectsContainer,
   Project,
@@ -30,13 +31,17 @@ const Projects = () => {
   return (
     <ProjectsSection>
       <ProjectsContainer>
+        <Title>Mis proyectos</Title>
+        <br />
+        <br />
+        <br />
         <ResponsiveMasonry
           columnsCountBreakPoints={{
             0: 1,
             960: 2,
           }}
         >
-          <Masonry gutter="80px">
+          <Masonry gutter="20px">
             {projects.map((item) => (
               <Project key={item.id}>
                 <ProjectTitle>{item.title}</ProjectTitle>
