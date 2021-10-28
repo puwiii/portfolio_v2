@@ -6,7 +6,7 @@ import {
   NavLogo,
   NavMenu,
   NavItem,
-  NavLink,
+  StyledNavLink,
   NavButton,
   MobileButton,
   NavLogoImage,
@@ -142,28 +142,28 @@ const Navbar = () => {
             show={showPlaceholder}
           />
           <NavItem onMouseEnter={(e) => handlePlaceholder(e)}>
-            <NavLink to={"/"}>
+            <StyledNavLink to={"/home"} activeClassName="selected">
               <BiHomeAlt />
               Inicio
-            </NavLink>
+            </StyledNavLink>
           </NavItem>
           <NavItem onMouseEnter={(e) => handlePlaceholder(e)}>
-            <NavLink to={"/projects"}>
+            <StyledNavLink to={"/projects"} activeClassName="selected">
               <BiCode />
               Proyectos
-            </NavLink>
+            </StyledNavLink>
           </NavItem>
           <NavItem onMouseEnter={(e) => handlePlaceholder(e)}>
-            <NavLink to={"/timeline"}>
+            <StyledNavLink to={"/timeline"} activeClassName="selected">
               <BiCalendar />
               Timeline
-            </NavLink>
+            </StyledNavLink>
           </NavItem>
           <NavItem onMouseEnter={(e) => handlePlaceholder(e)}>
-            <NavLink to={"/contact"}>
+            <StyledNavLink to={"/contact"} activeClassName="selected">
               <BiCommentDetail />
               Contacto
-            </NavLink>
+            </StyledNavLink>
           </NavItem>
           <NavItem
             onMouseEnter={(e) => setShowPlaceholder(false)}
@@ -212,6 +212,13 @@ const Navbar = () => {
           {showMobileMenu ? <BiX /> : <BiMenu />}
         </MobileButton>
       </NavbarContainer>
+
+      <style jsx>{`
+        .selected {
+          color: ${theme === "dark" ? "white" : "black"};
+          border-color: ${theme === "dark" ? "white" : "black"};
+        }
+      `}</style>
     </Nav>
   );
 };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container, Button, LinkButton } from "../../globalStyles";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   background: ${({ theme }) => theme.color_background_400};
@@ -94,7 +94,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled(Link)`
+export const StyledNavLink = styled(NavLink)`
   padding: 0 1em;
   display: flex;
   align-items: center;
@@ -112,9 +112,15 @@ export const NavLink = styled(Link)`
   transition: border-color 125ms ease-in-out, color 125ms linear;
 
   &:hover {
-    border-color: ${({ theme }) => theme.color_text_400};
+    /* border-color: ${({ theme }) => theme.color_text_400}; */
     color: ${({ theme }) => theme.color_text_400};
   }
+
+  /* border-color: ${({ activeClassName, theme }) =>
+    activeClassName === "selected" && theme.color_text_400};
+  color: ${({ activeClassName, theme }) =>
+    activeClassName === "selected" && theme.color_text_400}; */
+
   @media screen and (max-width: 1200px) {
     flex-direction: column;
   }

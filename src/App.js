@@ -13,7 +13,7 @@ import Home from "./pages/HomePage/Home";
 import Contact from "./pages/Contact";
 import Timeline from "./pages/TimelinePage/Timeline";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
-import ScrollToTop from "./components/ScrollToTop"
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const [{ theme }] = useStateValue();
@@ -22,11 +22,12 @@ const App = () => {
     <ThemeProvider theme={theme === THEME_STATE.LIGHT ? lightTheme : darkTheme}>
       <Router>
         <GlobalStyles />
-        <ScrollToTop/>
+        <ScrollToTop />
         <Navbar />
         <FloatLinks />
         <Switch>
           <Route path="/" component={Home} exact />
+          <Route path="/home" component={Home} exact />
           <Route path="/timeline" component={Timeline} exact />
           <Route path="/projects" component={ProjectsPage} exact />
           <Route path="/contact" component={Contact} exact />
