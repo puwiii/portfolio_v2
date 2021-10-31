@@ -147,8 +147,7 @@ export const Button = styled.button`
   transition: border-color 124ms linear, background-color 125ms linear;
   white-space: nowrap;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: ${({ theme }) => theme.color_text_400};
     color: ${({ theme }) => theme.color_text_400};
     background-color: transparent;
@@ -186,8 +185,7 @@ export const LinkButton = styled.a`
     }
   }};
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: ${({ theme }) => theme.color_text_400};
     color: ${({ theme }) => theme.color_text_400};
     background-color: transparent;
@@ -221,8 +219,7 @@ export const ReactLinkButton = styled(Link)`
   transition: border-color 124ms linear, background-color 125ms linear;
   white-space: nowrap;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: ${({ theme }) => theme.color_text_400};
     color: ${({ theme }) => theme.color_text_400};
     background-color: transparent;

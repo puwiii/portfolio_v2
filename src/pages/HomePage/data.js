@@ -15,11 +15,11 @@ export const IMG_TYPE = {
 export const aboutMe = {
   id: 1,
   variantNegative: false,
-  variantColor: false,
+  variantColor: true,
   variantLayout: true,
   img: {
     type: IMG_TYPE.ANIMATION,
-    animationName: "lottie_rocket_2.json",
+    animationName: "lottie_rocket.json",
     attr: {
       icon: <BiLinkExternal />,
       label: "Lex Komkov",
@@ -49,7 +49,7 @@ export const laboratory = {
   id: 2,
   variantNegative: false,
   variantColor: true,
-  variantLayout: false,
+  variantLayout: true,
   img: {
     type: IMG_TYPE.SVG,
     object: <Meaning />,
@@ -91,7 +91,7 @@ export const technologies = {
   id: 3,
   variantNegative: false,
   variantColor: false,
-  variantLayout: true,
+  variantLayout: false,
   img: {
     type: IMG_TYPE.ANIMATION,
     animationName: "react.json",

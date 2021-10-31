@@ -7,10 +7,10 @@ const Home = () => {
   return (
     <>
       <InfoSection data={aboutMe} key={aboutMe.id} />
-      <GridItems />
       <InfoSection data={technologies} key={technologies.id} />
+      <GridItems />
       <InfoSection data={laboratory} key={laboratory.id} />
-      <ContactForm key={"contact"} variantColor={true} />
+      <ContactForm key={"contact"} variantColor={false} />
     </>
   );
 };

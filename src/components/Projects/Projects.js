@@ -1,94 +1,38 @@
 import React, { useState } from "react";
 
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-
-import { BiCode, BiWorld } from "react-icons/bi";
-
 import {
-  Title,
   ProjectsSection,
   ProjectsContainer,
-  Project,
-  ProjectTitle,
-  ProjectSubtitle,
-  ProjectDescription,
-  ProjectLinks,
-  ProjectLink,
-  ProjectImageWrapper,
+  ProjectBanner,
   ProjectImage,
-  ProjectImages,
-  ProjectImageViewer,
-  ProjectImageViewerImage,
-  ProjectImageViewerContainer,
-  ProjectPharagraph,
 } from "./Projects.elements";
 
 import { projects } from "./data";
+import { useModal } from "../../hooks/useModal";
+import ProjectWindow from "../ProjectWindow/ProjectWindow";
 
 const Projects = () => {
-  const [imageURL, setImageURL] = useState(null);
+  const [isOpenPopup, openPopup, closePopup] = useModal(false);
+  const [projectWindow, setProjectWindow] = useState(null);
+
+  const openProject = (project) => {
+    setProjectWindow(project);
+    openPopup();
+  };
 
   return (
     <ProjectsSection>
       <ProjectsContainer>
-        <Title>Mis proyectos</Title>
-        <br />
-        <br />
-        <br />
-        <ResponsiveMasonry
-          columnsCountBreakPoints={{
-            0: 1,
-            960: 2,
-          }}
-        >
-          <Masonry gutter="20px">
-            {projects.map((item) => (
-              <Project key={item.id}>
-                <ProjectTitle>{item.title}</ProjectTitle>
-                <ProjectSubtitle>{item.subtitle}</ProjectSubtitle>
-                <ProjectImages>
-                  {item.images.map((image) => (
-                    <ProjectImageWrapper>
-                      <ProjectImage
-                        src={image.src}
-                        alt={image.alt}
-                        onClick={(e) => setImageURL(image.srchd)}
-                      />
-                    </ProjectImageWrapper>
-                  ))}
-                </ProjectImages>
-                <ProjectDescription>
-                  {item.description.map((pharagraph) => (
-                    <ProjectPharagraph>{pharagraph}</ProjectPharagraph>
-                  ))}
-                </ProjectDescription>
-                <ProjectLinks>
-                  {item.githubLink && (
-                    <ProjectLink href={item.githubLink} target="_blank">
-                      <BiCode />
-                      Código
-                    </ProjectLink>
-                  )}
-                  <ProjectLink href={item.link} target="_blank">
-                    <BiWorld />
-                    Visitar
-                  </ProjectLink>
-                </ProjectLinks>
-              </Project>
-            ))}
-          </Masonry>
-        </ResponsiveMasonry>
-      </ProjectsContainer>
+        {/* <Title>Mis proyectos</Title> */}
 
-      {imageURL && (
-        <ProjectImageViewerContainer onClick={(e) => setImageURL(null)}>
-          <ProjectImageViewer>
-            {/* <ProjectImageViewerButton onClick={(e) => setImageURL(null)}>
-              Cerrar
-            </ProjectImageViewerButton> */}
-            <ProjectImageViewerImage src={imageURL} />
-          </ProjectImageViewer>
-        </ProjectImageViewerContainer>
+        {projects.map((item) => (
+          <ProjectBanner onClick={(e) => openProject(item)}>
+            <ProjectImage src={item.banner} alt={item.alt} />
+          </ProjectBanner>
+        ))}
+      </ProjectsContainer>
+      {isOpenPopup && (
+        <ProjectWindow item={projectWindow} closeWindow={closePopup} />
       )}
     </ProjectsSection>
   );

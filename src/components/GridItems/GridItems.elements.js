@@ -7,14 +7,14 @@ export const GridItems = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 100px 0;
 `;
 
 export const GridContainer = styled(Container)`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
+  gap: 35px;
   justify-content: center;
 
   @media screen and (max-width: 920px) {
@@ -27,10 +27,9 @@ export const Item = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 20px 15px;
-  border-radius: 4px;
-  background-color: ${({ theme }) => theme.color_blue_300 + "15"};
+  gap: 10px;
+  padding: 2em;
+  /* background-color: ${({ theme }) => theme.color_background_300}; */
 `;
 
 export const ItemIcon = styled.div`

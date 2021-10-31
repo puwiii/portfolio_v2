@@ -1,5 +1,29 @@
 export const projects = [
   {
+    id: 8,
+    title: "Cinefan 2",
+    subtitle: "Cinefan 2 | Movies | Series | Trailers | More + ...",
+    description: [
+      // "Liza - Flashcards es un proyecto cuya intención es acercar a las personas los métodos más eficientes de estudio mediante una aplicación web interactiva.",
+      // "Esta Inspirada en Anki, una aplicación móvil y de escritorio que utiliza Active Recall y Spaced Repetition para implementar un sistema de tarjetas que el propio usuario se crea y que luego tendrá que responderlas y autoevaluarse cada cierta cantidad de tiempo.",
+    ],
+    githubLink: "https://github.com/puwiii/cinefan2",
+    link: "https://cinefan2.vercel.app/",
+    banner: "/images/projects/cinefan2.svg",
+    images: [
+      {
+        srchd: "/images/projects/originals/cinefan2Home.jpeg",
+        src: "/images/projects/cinefan2Home.png",
+        alt: "Cinefan 2 - Home",
+      },
+      {
+        srchd: "/images/projects/originals/cinefan2Details.jpeg",
+        src: "/images/projects/cinefan2Details.png",
+        alt: "Cinefan 2 - Details",
+      },
+    ],
+  },
+  {
     id: 7,
     title: "Hospital Santa Rosa - Landing Page",
     subtitle: "Tu salud es lo más importante",
@@ -9,6 +33,7 @@ export const projects = [
     ],
     githubLink: "https://github.com/puwiii/hsr-app",
     link: "https://hospitalsantarosa.vercel.app/",
+    banner: "/images/projects/hsr.svg",
     images: [
       {
         srchd: "/images/projects/originals/hsrHome.jpeg",
@@ -27,6 +52,7 @@ export const projects = [
     ],
     githubLink: "https://github.com/puwiii/activerecallapp",
     link: "https://activerecallapp.vercel.app/",
+    banner: "/images/projects/liza.svg",
     images: [
       {
         srchd: "/images/projects/originals/lizaDecks.jpeg",
@@ -50,6 +76,7 @@ export const projects = [
     ],
     githubLink: "https://github.com/puwiii/Weather-app",
     link: "https://climapp-nextjs.vercel.app/",
+    banner: "/images/projects/climapp.svg",
     images: [
       {
         srchd: "/images/projects/originals/climappHome.jpeg",
@@ -74,6 +101,7 @@ export const projects = [
     githubLink:
       "https://github.com/puwiii/PruebaReact/tree/main/what-can-i-see",
     link: "https://cinefan-b6f05.web.app/",
+    banner: "/images/projects/cinefan.svg",
     images: [
       {
         srchd: "/images/projects/originals/cinefanHome.jpeg",
@@ -87,63 +115,63 @@ export const projects = [
       },
     ],
   },
-  {
-    id: 4,
-    title: "Where in the world?",
-    subtitle: "The Atlas Website",
-    description: [
-      `"Where in the world?" es un atlas web en donde puedes encontrar información de cualquier país en el mundo. La información que provee la API "REST Countries" provee la más detallada información acerca de cada país, sus fronteras, idiomas oficiales, moneda oficial, capital, etc.`,
-    ],
-    githubLink:
-      "https://github.com/puwiii/WebProjects/tree/main/rest-countries-api-with-color-theme-switcher-master/archivo",
-    link: "https://country-info-by-sm.vercel.app/",
-    images: [
-      {
-        srchd: "/images/projects/originals/witwHome.jpeg",
-        src: "/images/projects/witwHome.jpeg",
-        alt: "Where in the world? - Home",
-      },
-      {
-        srchd: "/images/projects/originals/witwDetails.jpeg",
-        src: "/images/projects/witwDetails.jpeg",
-        alt: "Where in the world? - Details",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "IP Adress Tracker",
-    subtitle: "Want to see your neighborhood?",
-    description: [
-      `IP Adress Tracker es un simple rastreador IP que te muestra la localización de la IP que provee tu ISP con la API de "IP Geolocation API". IP Adress Tracker además provee esta información en un mapa interactivo de Leaftlet, una librearía JavaScript de mapas interactivos. `,
-    ],
-    githubLink:
-      "https://github.com/puwiii/Frontendmentor/tree/main/ip-address-tracker-master/archivo",
-    link: "https://ip-address-tracker-master-sm.vercel.app/",
-    images: [
-      {
-        srchd: "/images/projects/originals/iptrackerHome.jpeg",
-        src: "/images/projects/iptrackerHome.jpeg",
-        alt: "IP Adress Tracker - Home",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Bookmark",
-    subtitle: "Bookmark Landing Page",
-    description: [
-      `Bookmark es un producto ficticio de los retos de "Frontend Mentor". Esta landing page es un proyecto de los primeros que realice.`,
-    ],
-    githubLink:
-      "https://github.com/puwiii/Frontendmentor/tree/main/bookmark-landing-page-master/archivo",
-    link: "https://frontend-mentor-bookmark-sm.vercel.app/",
-    images: [
-      {
-        srchd: "/images/projects/originals/bookmarkHome.jpeg",
-        src: "/images/projects/bookmarkHome.jpeg",
-        alt: "Bookmark - Home",
-      },
-    ],
-  },
+  // {
+  //   id: 4,
+  //   title: "Where in the world?",
+  //   subtitle: "The Atlas Website",
+  //   description: [
+  //     `"Where in the world?" es un atlas web en donde puedes encontrar información de cualquier país en el mundo. La información que provee la API "REST Countries" provee la más detallada información acerca de cada país, sus fronteras, idiomas oficiales, moneda oficial, capital, etc.`,
+  //   ],
+  //   githubLink:
+  //     "https://github.com/puwiii/WebProjects/tree/main/rest-countries-api-with-color-theme-switcher-master/archivo",
+  //   link: "https://country-info-by-sm.vercel.app/",
+  //   images: [
+  //     {
+  //       srchd: "/images/projects/originals/witwHome.jpeg",
+  //       src: "/images/projects/witwHome.jpeg",
+  //       alt: "Where in the world? - Home",
+  //     },
+  //     {
+  //       srchd: "/images/projects/originals/witwDetails.jpeg",
+  //       src: "/images/projects/witwDetails.jpeg",
+  //       alt: "Where in the world? - Details",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 5,
+  //   title: "IP Adress Tracker",
+  //   subtitle: "Want to see your neighborhood?",
+  //   description: [
+  //     `IP Adress Tracker es un simple rastreador IP que te muestra la localización de la IP que provee tu ISP con la API de "IP Geolocation API". IP Adress Tracker además provee esta información en un mapa interactivo de Leaftlet, una librearía JavaScript de mapas interactivos. `,
+  //   ],
+  //   githubLink:
+  //     "https://github.com/puwiii/Frontendmentor/tree/main/ip-address-tracker-master/archivo",
+  //   link: "https://ip-address-tracker-master-sm.vercel.app/",
+  //   images: [
+  //     {
+  //       srchd: "/images/projects/originals/iptrackerHome.jpeg",
+  //       src: "/images/projects/iptrackerHome.jpeg",
+  //       alt: "IP Adress Tracker - Home",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 6,
+  //   title: "Bookmark",
+  //   subtitle: "Bookmark Landing Page",
+  //   description: [
+  //     `Bookmark es un producto ficticio de los retos de "Frontend Mentor". Esta landing page es un proyecto de los primeros que realice.`,
+  //   ],
+  //   githubLink:
+  //     "https://github.com/puwiii/Frontendmentor/tree/main/bookmark-landing-page-master/archivo",
+  //   link: "https://frontend-mentor-bookmark-sm.vercel.app/",
+  //   images: [
+  //     {
+  //       srchd: "/images/projects/originals/bookmarkHome.jpeg",
+  //       src: "/images/projects/bookmarkHome.jpeg",
+  //       alt: "Bookmark - Home",
+  //     },
+  //   ],
+  // },
 ];
